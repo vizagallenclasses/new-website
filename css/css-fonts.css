@@ -1,0 +1,145 @@
+/************************************************
+    Custom app fonts css start here
+/*************************************************/
+@font-face {
+    font-family: 'proximaNova-L';
+    src:  url('../fonts/fonts-ProximaNova-Light.ttf');
+    src:   url('../fonts/fonts-ProximaNova-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'proximaNova-R';
+    src:  url('../fonts/fonts-ProximaNova-Regular.ttf');
+    src:   url('../fonts/fonts-ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'proximaNova-SB';
+    src:  url('../fonts/fonts-ProximaNova-Semibold.ttf');
+    src:   url('../fonts/fonts-ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'proximaNova-B';
+    src:  url('../fonts/fonts-ProximaNova-Bold.ttf');
+    src:   url('../fonts/fonts-ProximaNova-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  
+/************************************************
+    Custom Icon css start here
+/*************************************************/
+@font-face {
+    font-family: 'mitskills';
+    src:  url('../fonts/fonts-mitskills.eot');
+    src:  url('../fonts/fonts-mitskills.eot#iefix') format('embedded-opentype'),
+      url('../fonts/fonts-mitskills.ttf') format('truetype'),
+      url('../fonts/fonts-mitskills.woff') format('woff'),
+      url('../fonts/fonts-mitskills.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="mtsk-"], [class*=" mtsk-"] {
+    font-family: 'mitskills' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+ 
+.mtsk-minus:before {
+  content: "\e90e";
+}
+.mtsk-duration:before {
+  content: "\e90f";
+}
+.mtsk-fee:before {
+  content: "\e910";
+}
+.mtsk-language:before {
+  content: "\e911";
+}
+.mtsk-plus:before {
+  content: "\e912";
+}
+.mtsk-training:before {
+  content: "\e913";
+}
+.mtsk-download:before {
+  content: "\e902";
+}
+.mtsk-down-arrow:before {
+  content: "\e903";
+}
+.mtsk-left-arrow:before {
+  content: "\e90c";
+}
+.mtsk-right-arrow:before {
+  content: "\e90d";
+}
+.mtsk-arrow:before {
+  content: "\e900";
+}
+.mtsk-cource:before {
+  content: "\e901";
+}
+.mtsk-facebook:before {
+  content: "\e904";
+}
+.mtsk-instagram:before {
+  content: "\e905";
+}
+.mtsk-linkedIn:before {
+  content: "\e906";
+}
+.mtsk-mail:before {
+  content: "\e907";
+}
+.mtsk-pf:before {
+  content: "\e908";
+}
+.mtsk-phone:before {
+  content: "\e909";
+}
+.mtsk-time:before {
+  content: "\e90a";
+}
+.mtsk-user:before {
+  content: "\e90b";
+}
+.mtsk-location:before {
+  content: "\e914";
+}
+
+.right-icon:before {
+  content: "\2705";
+}
+
+.newright-icon1:before {
+  content: "\002705";
+}
+
+.newdown-arrow:before {
+  content: "\2193";
+}
+
+.newuparrow:before{
+  content: "\2191";
+}
+

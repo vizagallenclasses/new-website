@@ -1,0 +1,21 @@
+# Version control
+.git
+.gitignore
+
+# Docker files (not needed in container)
+.dockerignore
+docker-compose.yml
+
+# Documentation
+*.md
+README*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode
+.idea
+*.swp
+*.swo

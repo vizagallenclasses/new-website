@@ -1,0 +1,305 @@
+.hero11 {
+  text-align: justify;
+}
+
+.brandcolor {
+  /* background-color: #ffbe76; */
+  background-color: #fff;
+  color: #000000;
+  font-size:  1.1rem;
+  color: var(--text-color);
+  font-family: var(--font-family-R);
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  /* font-size: 18px; */
+}
+
+.hero10 {
+  background-color: #f5f5f5;
+}
+
+.fin-feature1 {
+  position: relative;
+  list-style-type: none;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+
+/* .fin-feature1 li::before {
+    content: "\2192"; 
+    display: inline-block;
+    margin-right: 5px; 
+    
+    color: var(--text-color);
+    font-family: var(--font-family-R);
+    
+    font-weight: 400;
+   
+} */
+
+/* table- common */
+
+.fin-feature2 {
+  position: relative;
+  list-style-type: none;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+
+/* .fin-feature2 li::before {
+    content: "\2713"; 
+    content: "\2192"; Unicode character for right arrow
+    display: inline-block;
+     font-weight: bold;
+    margin-right: 5px; Adjust the spacing as needed
+    
+    color: var(--text-color);
+    font-family: var(--font-family-R);
+    
+    font-weight: 400;
+   
+} */
+
+/* Common styles for table and ul */
+.table {
+  width: 100%;
+  max-width: none;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-left: -12px; */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size:  1.1rem;
+  color: var(--text-color);
+  font-family: var(--font-family-R);
+    
+  font-weight: 400;
+}
+
+.table th {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* Style for the first, third, and fifth columns in each row in tbody */
+.table tbody tr:nth-child(1),
+.table tbody tr:nth-child(3),
+.table tbody tr:nth-child(5),
+.table tbody tr:nth-child(7) {
+  background-color: #ffffff;
+  color: #000; /* Text color for better visibility, adjust as needed */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .table {
+    width: 100%;
+    max-width: none;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-left: -12px;
+  }
+
+  .table tbody tr {
+    /* display: inline-flex; */
+    width: 100%;
+    table-layout: auto; /* Change to auto for better responsiveness */
+  }
+
+  .table tbody td {
+    display: table-cell;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  .curriculum {
+    overflow-x: scroll; /* Enable horizontal scrolling for the ul on small screens */
+  }
+}
+
+/* learning Outcomes css */
+
+/* .hero12 {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #fff;
+  z-index: 1;
+  background: #e8e8e8;
+  background: #212121;
+  position: relative;
+  font-family: var(--font-family-R);
+  font-weight: 400;
+  font-size: 18px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+
+ }
+ 
+ .hero12::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  background-color: #e8e8e8;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+ }
+ 
+ .hero12:hover {
+  color: #000;
+ }
+ 
+ .hero12:hover::before {
+  width: 100%;
+ } */
+
+/* learning Outcomes css */
+.lernernewsupport a {
+  color: #fff;
+  text-decoration: none;
+}
+.lernernewsupport {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #000;
+  position: relative;
+  font-weight: 1000;
+  font-size: 20px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 2000ms;
+  color: orangered;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 30px 0;
+}
+
+.lernernewsupport::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background: #fb9e44;
+  color: black;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 2000ms;
+}
+
+.lernernewsupport .a:hover::after {
+  color: #e8e8e8;
+}
+
+.lernernewsupport:hover::before {
+  width: 100%;
+}
+
+/* admission-prossess page */
+
+.admissionbanner {
+  background: #fff5d6 url(../images/common-admission.jpg) top center
+    no-repeat;
+  background-size: cover;
+  padding-top: 2rem;
+  height: 70vh;
+}
+
+/* .admissioninner-banner {
+  background-color: #FFF5D6;
+  background-image: inherit;  ye class se image nahi dikhegi
+  padding: 2rem 0 0rem;
+} */
+
+/* admission-prossess page */
+
+/* .parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+} */
+
+/* **************************** */
+
+
+
+
+/* ************************* */
+
+.hero14{
+  text-align: justify;
+}
+
+
+
+
+
+
+
+/* media query all */
+@media screen and (max-width: 768px) {
+  /*  /* get touch in form home page */
+
+  
+
+  
+  .certification-carousel .slick-arrow {
+    margin-top: -21px;
+  }
+  .hero13{
+    margin-top: 50px;
+  }
+  .app-featurelist{
+    position: sticky;
+    top: 10px;
+    z-index: 999;
+    background: #ffffff;
+  }
+  #fixissue{
+    margin-left: -20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+  
+  .navbar-collapse {
+    margin-right: -15px;
+  }
+
+  
+}
+
+/* last css class */
+
+/* hero 16 */
