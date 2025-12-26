@@ -623,7 +623,7 @@ ul.dropdown-menu {
   background-position: 20px;
 }
 .alumni.benefits .our-al {
-  background: url(../images/images-benefits.png) center left no-repeat;
+  background: transparent;
   align-items: center;
 }
 .alumni .our-al p {
