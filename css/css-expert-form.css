@@ -1,0 +1,340 @@
+/* ============================================
+   Ask Our Experts Form - Modern Redesign
+   ============================================ */
+
+/* Form Container with Glassmorphism */
+.expert-form-container {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #01579b 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.expert-form-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.expert-form-container::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -30%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(85, 164, 219, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Form Title */
+.expert-form-title {
+    color: #ffffff;
+    font-family: var(--font-family-SB);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.expert-form-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #55a4db, #80d4f5);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+/* Form Group */
+.expert-form .form-group {
+    position: relative;
+    margin-bottom: 1.25rem;
+    z-index: 1;
+}
+
+/* Modern Input Styling */
+.expert-form .form-control-modern {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: var(--font-family-R);
+    color: #333;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.expert-form .form-control-modern:focus {
+    border-color: #55a4db;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(85, 164, 219, 0.3);
+    transform: translateY(-2px);
+}
+
+.expert-form .form-control-modern::placeholder {
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.expert-form .form-control-modern:focus::placeholder {
+    opacity: 0.6;
+    transform: translateX(5px);
+}
+
+/* Select Dropdown */
+.expert-form .form-select-modern {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: var(--font-family-R);
+    color: #333;
+    background: rgba(255, 255, 255, 0.95) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231a237e' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") no-repeat right 12px center;
+    background-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.expert-form .form-select-modern:focus {
+    border-color: #55a4db;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(85, 164, 219, 0.3);
+}
+
+.expert-form .form-select-modern option {
+    padding: 10px;
+}
+
+/* Validation States */
+.expert-form .form-control-modern.error,
+.expert-form .form-select-modern.error {
+    border-color: #ef5350;
+    background-color: #fff5f5;
+    animation: shake 0.5s ease;
+}
+
+.expert-form .form-control-modern.valid,
+.expert-form .form-select-modern.valid {
+    border-color: #4caf50;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Consent Checkbox */
+.expert-form .consent-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.expert-form .consent-checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    accent-color: #55a4db;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.expert-form .consent-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    font-family: var(--font-family-R);
+}
+
+/* Submit Button */
+.expert-form .submit-btn {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    font-family: var(--font-family-SB);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a237e;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.expert-form .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #55a4db 0%, #1a237e 100%);
+    color: #ffffff;
+}
+
+.expert-form .submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.expert-form .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading Spinner */
+.expert-form .btn-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(26, 35, 126, 0.3);
+    border-top-color: #1a237e;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 10px;
+}
+
+.expert-form .submit-btn.loading .btn-spinner {
+    display: inline-block;
+}
+
+.expert-form .submit-btn.loading .btn-text {
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success/Error Messages */
+.expert-form .form-message {
+    display: none;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--font-family-R);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.expert-form .form-message.success {
+    display: block;
+    background: rgba(76, 175, 80, 0.95);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.expert-form .form-message.error {
+    display: block;
+    background: rgba(239, 83, 80, 0.95);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(239, 83, 80, 0.3);
+}
+
+.expert-form .form-message .message-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Decorative Elements */
+.expert-form-container .decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.expert-form-container .decoration-circle.circle-1 {
+    width: 150px;
+    height: 150px;
+    top: -40px;
+    right: -40px;
+}
+
+.expert-form-container .decoration-circle.circle-2 {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    left: -30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .expert-form-container {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .expert-form-title {
+        font-size: 1.5rem;
+    }
+    
+    .expert-form .form-control-modern,
+    .expert-form .form-select-modern {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .expert-form .submit-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for form appearance */
+.expert-form-container.animate-in {
+    animation: formAppear 0.6s ease forwards;
+}
+
+@keyframes formAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

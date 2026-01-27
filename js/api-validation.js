@@ -1,26 +1,199 @@
+// API Configuration - Update this URL for production
+var API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3000/api/send-email'
+  : '/api/send-email';
+
+// Submit Expert Form - New function for SMTP email sending
+function submitExpertForm() {
+  var form = document.getElementById('menuContactFloting');
+  var submitBtn = document.getElementById('submitbtnsticky');
+  var formMessage = document.getElementById('formMessage');
+
+  // Get form values
+  var name = document.getElementById('expert-name').value.trim();
+  var email = document.getElementById('expert-email').value.trim();
+  var mobile = document.getElementById('expert-mobile').value.trim();
+  var city = document.getElementById('expert-city').value;
+  var program = document.getElementById('expert-program').value;
+
+  // Clear previous messages
+  formMessage.className = 'form-message';
+  formMessage.style.display = 'none';
+
+  // Validate fields
+  var isValid = true;
+  var inputs = form.querySelectorAll('.form-control-modern, .form-select-modern');
+
+  inputs.forEach(function (input) {
+    input.classList.remove('error', 'valid');
+  });
+
+  if (!name) {
+    document.getElementById('expert-name').classList.add('error');
+    isValid = false;
+  } else {
+    document.getElementById('expert-name').classList.add('valid');
+  }
+
+  // Email validation
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    document.getElementById('expert-email').classList.add('error');
+    isValid = false;
+  } else {
+    document.getElementById('expert-email').classList.add('valid');
+  }
+
+  // Phone validation (10 digits)
+  var phoneRegex = /^[0-9]{10}$/;
+  if (!mobile || !phoneRegex.test(mobile)) {
+    document.getElementById('expert-mobile').classList.add('error');
+    isValid = false;
+  } else {
+    document.getElementById('expert-mobile').classList.add('valid');
+  }
+
+  if (!city) {
+    document.getElementById('expert-city').classList.add('error');
+    isValid = false;
+  } else {
+    document.getElementById('expert-city').classList.add('valid');
+  }
+
+  if (!program) {
+    document.getElementById('expert-program').classList.add('error');
+    isValid = false;
+  } else {
+    document.getElementById('expert-program').classList.add('valid');
+  }
+
+  if (!isValid) {
+    showFormMessage('error', 'Please fill in all required fields correctly.');
+    return;
+  }
+
+  // Show loading state
+  submitBtn.classList.add('loading');
+  submitBtn.disabled = true;
+
+  // Prepare data
+  var formData = {
+    name: name,
+    email: email,
+    mobile: mobile,
+    city: city,
+    program: program
+  };
+
+  // Send to API
+  fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+
+      if (data.success) {
+        showFormMessage('success', data.message || 'Thank you! Your enquiry has been submitted successfully.');
+        // Reset form
+        form.reset();
+        inputs.forEach(function (input) {
+          input.classList.remove('valid', 'error');
+        });
+        // Re-check consent checkbox
+        document.getElementById('expertConsent').checked = true;
+      } else {
+        showFormMessage('error', data.message || 'Failed to submit. Please try again.');
+      }
+    })
+    .catch(function (error) {
+      console.error('Form submission error:', error);
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+      showFormMessage('error', 'Network error. Please check your connection and try again.');
+    });
+
+  // Also send to existing third-party API (optional - for backward compatibility)
+  try {
+    var lead = {
+      AuthToken: "MITSDE-11-06-2020",
+      Source: "mitsde",
+      FirstName: name,
+      MobileNumber: mobile,
+      Email: email,
+      LeadSource: "Organic-Direct-Form",
+      LeadType: "Online",
+      LeadName: "Contact us form leads",
+      Course: program,
+      State: city,
+      Textb1: program
+    };
+
+    $.ajax({
+      url: "https://thirdpartyapi.extraaedge.com/api/SaveRequest",
+      type: "POST",
+      data: JSON.stringify(lead),
+      dataType: "Text",
+      crossDomain: true,
+      contentType: "application/json; charset=utf-8",
+      success: function (response) {
+        console.log('Third-party API success');
+      },
+      error: function (response) {
+        console.log('Third-party API error (non-critical)');
+      }
+    });
+  } catch (e) {
+    console.log('Third-party API call failed (non-critical)');
+  }
+}
+
+// Show form message helper
+function showFormMessage(type, message) {
+  var formMessage = document.getElementById('formMessage');
+  var messageIcon = formMessage.querySelector('.message-icon');
+  var messageText = formMessage.querySelector('.message-text');
+
+  messageIcon.textContent = type === 'success' ? '✓' : '✗';
+  messageText.textContent = message;
+  formMessage.className = 'form-message ' + type;
+  formMessage.style.display = 'block';
+
+  // Scroll message into view
+  formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  // Auto-hide after 10 seconds
+  setTimeout(function () {
+    if (formMessage.classList.contains(type)) {
+      formMessage.style.display = 'none';
+    }
+  }, 10000);
+}
+
 var submitform = true;
 var is_submit = true;
 var is_ajax_return = true;
-//alert('hi');
-
-// var myParam = location.search.split('sourcesPath=')[1];
-// alert(myParam)
 
 function submitcontactvalidate(form_id, name) {
   if (is_submit) {
-    //alert(form_id);
     var $inputs = $(
       "#" +
-        form_id +
-        " textarea, " +
-        "#" +
-        form_id +
-        " :input, " +
-        "#" +
-        form_id +
-        " select"
+      form_id +
+      " textarea, " +
+      "#" +
+      form_id +
+      " :input, " +
+      "#" +
+      form_id +
+      " select"
     );
-    // alert(is_submit);
     $inputs.each(function () {
       if ($(this).attr("validate") != undefined) {
         var validation = $(this).attr("validate");
@@ -31,7 +204,6 @@ function submitcontactvalidate(form_id, name) {
         for (var i = 0; i < validation_array.length; i++) {
           var validation_inner_array = validation_array[i].split("|");
           for (var j = 0; j < validation_inner_array.length; j++) {
-            //alert(validation_inner_array);
             switch (validation_inner_array[j]) {
               case "Required":
                 if (name == "all" || current_name == name) {
@@ -88,7 +260,6 @@ function submitcontactvalidate(form_id, name) {
                     $(this).addClass("error");
                     submitform = false;
                   } else if (isNaN(value)) {
-                    //|| value.length != 10
                     $(this).removeClass("valid");
                     $(this).addClass("error");
                     submitform = false;
@@ -172,14 +343,14 @@ function do_form_submit(form_id) {
         document.getElementById("submitbtn1").style.visibility = "hidden";
         var $inputs = $(
           "#" +
-            form_id +
-            " textarea, " +
-            "#" +
-            form_id +
-            " :input, " +
-            "#" +
-            form_id +
-            " select"
+          form_id +
+          " textarea, " +
+          "#" +
+          form_id +
+          " :input, " +
+          "#" +
+          form_id +
+          " select"
         );
         // alert("menuContactform");
         var lead = {
@@ -234,14 +405,14 @@ function do_form_submit(form_id) {
         document.getElementById("submitbtnsticky").style.visibility = "hidden";
         var $inputs = $(
           "#" +
-            form_id +
-            " textarea, " +
-            "#" +
-            form_id +
-            " :input, " +
-            "#" +
-            form_id +
-            " select"
+          form_id +
+          " textarea, " +
+          "#" +
+          form_id +
+          " :input, " +
+          "#" +
+          form_id +
+          " select"
         );
         //  alert("menuContactFloting");
         var lead = {
@@ -296,14 +467,14 @@ function do_form_submit(form_id) {
         document.getElementById("submitbtnsticky").style.visibility = "hidden";
         var $inputs = $(
           "#" +
-            form_id +
-            " textarea, " +
-            "#" +
-            form_id +
-            " :input, " +
-            "#" +
-            form_id +
-            " select"
+          form_id +
+          " textarea, " +
+          "#" +
+          form_id +
+          " :input, " +
+          "#" +
+          form_id +
+          " select"
         );
         //alert("QuickContact3");
         var lead = {
@@ -358,14 +529,14 @@ function do_form_submit(form_id) {
         document.getElementById("submitbtn2").style.visibility = "hidden";
         var $inputs = $(
           "#" +
-            form_id +
-            " textarea, " +
-            "#" +
-            form_id +
-            " :input, " +
-            "#" +
-            form_id +
-            " select"
+          form_id +
+          " textarea, " +
+          "#" +
+          form_id +
+          " :input, " +
+          "#" +
+          form_id +
+          " select"
         );
         //alert("QuickContact3");
         var lead = {

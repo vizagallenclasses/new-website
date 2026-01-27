@@ -62,6 +62,7 @@
     <link rel="stylesheet" href="css/css-all.min.css" type="text/css">
 
     <link rel="stylesheet" href="css/css-homepage.css" type="text/css">
+    <link rel="stylesheet" href="css/css-expert-form.css" type="text/css">
     <!-- font awesome css -->
 
     <!--API for Queck contact----->
@@ -560,101 +561,94 @@
                         }
 
                     </script>
-                    <div class="col-md-12 col-lg-4 bg-dark d-flex justify-content-evenly " id="firstform"
-                        style="border-radius: 10px; padding-top: 20px; margin-bottom: 5px ; height: 100%">
+                    <div class="col-md-12 col-lg-4" id="firstform" style="margin-bottom: 5px; height: 100%">
 
-                        <div class="col-md-12 col-lg-12 bg-dark  pb-3 " style="border-radius: 5px;">
-                            <h3 class="text-white">Ask our Experts</h3>
+                        <div class="expert-form-container animate-in">
+                            <!-- Decorative circles -->
+                            <div class="decoration-circle circle-1"></div>
+                            <div class="decoration-circle circle-2"></div>
 
+                            <h3 class="expert-form-title">Ask our Experts</h3>
 
-
-                            <form action="mailto:allenclasses2014@gmail.com" method="post"
-                                class="reservation-form mt-20 myFormH" accept-charset="utf-8" name="menuContactFloting"
-                                id="menuContactFloting" novalidate="novalidate">
+                            <form class="expert-form" id="menuContactFloting" novalidate>
                                 <input type="hidden" name="csrf_test_name" value="e678298614a47d7e40efe0ccaf02b49c">
                                 <input type="hidden" id="product_id3" name="product_id3" value="0">
                                 <input type="hidden" id="product_name3" name="product_name3" value="">
                                 <input type="hidden" name="request_type3" value="Enquiry">
 
-                                <div class="mb-3">
-
-                                    <input name="first_name3" type="text" class="form-control" value="First Name*"
-                                        onblur="javascript:addDefault(this,'menuContactFloting')"
-                                        onfocus="javascript:removeDefault(this)" validate="Required|First Name*">
-                                </div>
-                                <div class="mb-3">
-
-                                    <input name="email3" type="text" class="form-control" value="Email*"
-                                        onblur="javascript:addDefault(this,'menuContactFloting')"
-                                        onfocus="javascript:removeDefault(this)" validate="Email|Email*">
-                                </div>
-                                <div class="mb-3">
-
-                                    <input name="MobileNumber" class="form-control" type="text" pattern="[0-9]"
-                                        value="MobileNumber*" onblur="javascript:addDefault(this,'menuContactFloting')"
-                                        onfocus="javascript:removeDefault(this)" validate="Required|Phone|Phone*">
+                                <div class="form-group">
+                                    <input name="first_name3" type="text" class="form-control-modern"
+                                        placeholder="Your Name *" id="expert-name" validate="Required|First Name*">
                                 </div>
 
+                                <div class="form-group">
+                                    <input name="email3" type="email" class="form-control-modern"
+                                        placeholder="Email Address *" id="expert-email" validate="Email|Email*">
+                                </div>
 
-                                <select name="state" class="form-select form-control   mb-3" id="state"
-                                    onblur="javascript:addDefault(this,'menuContactFloting')"
-                                    onfocus="javascript:removeDefault(this)" validate="Required|State|State*">
+                                <div class="form-group">
+                                    <input name="MobileNumber" class="form-control-modern" type="tel"
+                                        placeholder="Mobile Number *" id="expert-mobile" maxlength="10"
+                                        validate="Required|Phone|Phone*">
+                                </div>
 
-                                    <option value>Select City</option>
-                                    <option value="Andhra Pradesh">Visakhapatnam</option>
-                                    <option value="Andhra Pradesh">Vizianagaram</option>
-                                    <option value="Bobbili">Bobbili</option>
-                                    <option value="Anakapalle">Anakapalle</option>
-                                    <option value="Araku Valley">Araku Valley</option>
-                                    <option value="Bheemili">Bheemili</option>
-                                    <option value="Bhimavaram">Bhimavaram</option>
-                                    <option value="Bhimunipatnam">Bhimunipatnam</option>
-                                    <option value="Bhogopuram">Bhogopuram</option>
-                                    <option value="Chodavarm">Chodavaram</option>
-                                    <option value="Gajapathinagarm">Gajapathinagarm</option>
-                                    <option value="Jangareddigudem">Jangareddigudem</option>
-                                    <option value="Kovvur">Kovvur</option>
-                                    <option value="RJY">Rajahmundry</option>
-                                    <option value="Amalapuram">Amalapuram</option>
-                                    <option value="Odisha">Rayagada</option>
+                                <div class="form-group">
+                                    <select name="state" class="form-select-modern" id="expert-city"
+                                        validate="Required|State|State*">
+                                        <option value="">Select City *</option>
+                                        <option value="Visakhapatnam">Visakhapatnam</option>
+                                        <option value="Vizianagaram">Vizianagaram</option>
+                                        <option value="Bobbili">Bobbili</option>
+                                        <option value="Anakapalle">Anakapalle</option>
+                                        <option value="Araku Valley">Araku Valley</option>
+                                        <option value="Bheemili">Bheemili</option>
+                                        <option value="Bhimavaram">Bhimavaram</option>
+                                        <option value="Bhimunipatnam">Bhimunipatnam</option>
+                                        <option value="Bhogopuram">Bhogopuram</option>
+                                        <option value="Chodavaram">Chodavaram</option>
+                                        <option value="Gajapathinagarm">Gajapathinagarm</option>
+                                        <option value="Jangareddigudem">Jangareddigudem</option>
+                                        <option value="Kovvur">Kovvur</option>
+                                        <option value="Rajahmundry">Rajahmundry</option>
+                                        <option value="Amalapuram">Amalapuram</option>
+                                        <option value="Rayagada">Rayagada</option>
+                                    </select>
+                                </div>
 
+                                <div class="form-group">
+                                    <select name="HQ" id="expert-program" class="form-select-modern"
+                                        validate="Required|HQ*">
+                                        <option value="">Select Program *</option>
+                                        <option value="NEET">NEET</option>
+                                        <option value="IIT-JEE">IIT-JEE</option>
+                                        <option value="CBSE">CBSE XI &amp; XII</option>
+                                    </select>
+                                </div>
 
-                                </select>
-
-                                <select name="HQ" id="HQ" class="form-select form-control mb-4"
-                                    onblur="javascript:addDefault(this,'menuContactFloting')"
-                                    onfocus="javascript:removeDefault(this)" validate="Required|HQ*">
-
-                                    <option value="" readonly>Select Program</option>
-                                    <option value="NEET">NEET</option>
-                                    <option value="IIT-JEE">IIT-JEE</option>
-                                    <option value="CBSE">CBSE XI &amp; XII</option>
-                                </select>
                                 <input name="Divice" type="hidden" value="desktop">
-                                <input name="PageName" type="hidden" value="index.php">
+                                <input name="PageName" type="hidden" value="index.html">
                                 <input type="hidden" name="latitude" value="">
                                 <input type="hidden" name="longitude" value="">
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-
-                                    <small class="text-white">I authorize Vizag's ALLENCLASSES representative to contact
-                                        me,this will override DND/NDNC
-                                        registry.</small>
+                                <div class="consent-group">
+                                    <input class="consent-checkbox" type="checkbox" id="expertConsent" checked>
+                                    <label for="expertConsent" class="consent-text">
+                                        I authorize Vizag's ALLENCLASSES representative to contact me. This will
+                                        override DND/NDNC registry.
+                                    </label>
                                 </div>
 
-                                <div class="form-group ">
-                                    <input type="hidden" name="submitthirdcontact" value="submitthirdcontact">
-                                    <button type="button" id="submitbtnsticky"
-                                        class="btn btn-primary mit-button mit-footer btn-ripple w-100 "
-                                        onclick="validate('menuContactFloting')">
-                                        Register Now
-                                    </button>
+                                <input type="hidden" name="submitthirdcontact" value="submitthirdcontact">
 
+                                <button type="button" id="submitbtnsticky" class="submit-btn"
+                                    onclick="submitExpertForm()">
+                                    <span class="btn-spinner"></span>
+                                    <span class="btn-text">Register Now</span>
+                                </button>
 
-
-
+                                <div class="form-message" id="formMessage">
+                                    <span class="message-icon"></span>
+                                    <span class="message-text"></span>
                                 </div>
                             </form>
                         </div>

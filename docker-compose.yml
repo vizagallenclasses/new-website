@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Frontend - Nginx serving static files
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - allen-network
+
+  # Backend API - Node.js Express server
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./api/.env
+    networks:
+      - allen-network
+    restart: unless-stopped
+
+networks:
+  allen-network:
+    driver: bridge
