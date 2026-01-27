@@ -6,12 +6,37 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// CORS configuration - Allow specific origins
+const allowedOrigins = [
+    'https://vizagallenclasses.in',
+    'https://www.vizagallenclasses.in',
+    'http://localhost',
+    'http://localhost:80',
+    'http://127.0.0.1'
+];
+
 // Middleware
 app.use(cors({
-    origin: '*', // Allow all origins for now, restrict in production
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+
+        if (allowedOrigins.indexOf(origin) !== -1 || origin.includes('vizagallenclasses')) {
+            callback(null, true);
+        } else {
+            console.log('CORS blocked origin:', origin);
+            callback(null, true); // Allow all for now, log for debugging
+        }
+    },
     methods: ['POST', 'GET', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    credentials: true,
+    optionsSuccessStatus: 200 // For legacy browser support
 }));
+
+// Handle preflight requests explicitly
+app.options('*', cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

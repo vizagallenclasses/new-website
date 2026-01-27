@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 16px;
   scroll-padding-top: 8rem;
   scrollbar-color: #10315f #ecf0f1;
   scrollbar-width: thin;
 }
+
 :root {
   --font-family-L: "proximaNova-L", sans-serif;
   --font-family-R: "proximaNova-R", sans-serif;
@@ -20,6 +22,7 @@ html {
   --card-bg: #ffffff;
   --medium-font-size: 0.875rem;
 }
+
 body {
   background-color: #fff;
   font-family: var(--font-family-R);
@@ -28,10 +31,12 @@ body {
   color: #000;
   overflow-x: hidden;
 }
+
 .container {
   padding-right: var(--bs-gutter-x);
   padding-left: var(--bs-gutter-x);
 }
+
 /* .slick-list{
   overflow: inherit !important;
 }
@@ -46,19 +51,23 @@ body {
   padding: 0;
   box-shadow: 0px -1px 20px -1px rgba(72, 86, 133, 0.25);
 }
+
 .avigation a.navbar-brand {
   display: flex;
   align-items: center;
   padding: 1.1rem 0;
 }
+
 .navigation .navbar-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .navigation .navbar-nav .nav-item {
   padding: 0 0.6rem;
 }
+
 .navigation .navbar-nav .nav-item .nav-link {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -67,6 +76,7 @@ body {
   text-transform: capitalize;
   padding: 25px 9px;
 }
+
 .dropdown-toggle::after {
   content: "\e903";
   font-family: "mitskills" !important;
@@ -75,10 +85,12 @@ body {
   font-size: 0.75rem;
   margin-left: 0.5rem;
 }
+
 .navigation .navbar-nav .nav-item .nav-link:hover,
 .navigation .navbar-nav .nav-item .nav-link.active {
   color: var(--hover-color);
 }
+
 .socials {
   display: flex;
   align-items: center;
@@ -88,6 +100,7 @@ body {
   border-left: 1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
 }
+
 .socials .socials-links {
   display: flex;
   margin: 0 12px 0 11px;
@@ -97,9 +110,11 @@ body {
   padding: 27px 0;
   transition: 0.2s ease-in-out;
 }
+
 .socials .socials-links:hover {
   color: var(--hover-color);
 }
+
 .mit-button {
   color: #fff;
   font-family: var(--font-family-SB);
@@ -114,6 +129,7 @@ body {
   transition: 0.2s ease-in-out;
   white-space: nowrap;
 }
+
 .mit-button:hover,
 .mit-button:active,
 .mit-button:visited,
@@ -137,6 +153,7 @@ body {
   transition: 0.2s ease-in-out;
   white-space: nowrap;
 }
+
 .mit-button-banner-and-footer-form:hover,
 .mit-button-banner-and-footer-form:active,
 .mit-button-banner-and-footer-form:visited,
@@ -144,6 +161,7 @@ body {
   color: var(--text-color) !important;
   background: var(--card-bg) !important;
 }
+
 /* home page after hover change background color button */
 ul.dropdown-menu {
   box-shadow: 0px 10px 20px -10px rgba(72, 86, 133, 0.25);
@@ -154,6 +172,7 @@ ul.dropdown-menu {
   border-radius: 0 0 5px 5px;
   min-width: 15rem;
 }
+
 .dropdown-item:focus,
 .dropdown-item:hover,
 .dropdown-item.active,
@@ -162,6 +181,7 @@ ul.dropdown-menu {
   background-color: transparent;
   color: var(--button-bg-color);
 }
+
 .dropdown-menu li a,
 .navigation .navbar-nav .nav-item.secondnav .nav-link {
   border-bottom: solid 1px #f5f5f5;
@@ -175,9 +195,11 @@ ul.dropdown-menu {
   width: 100%;
   font-weight: 700;
 }
+
 .navigation .navbar-nav .nav-item.secondnav {
   padding: 0;
 }
+
 .navigation .navbar-nav .nav-item.secondnav .nav-link {
   font-family: var(--font-family-R);
   color: #333333 !important;
@@ -199,6 +221,7 @@ ul.dropdown-menu {
 .dropdown-menu li a:hover {
   color: var(--button-bg-color);
 }
+
 .bootstrap-select .dropdown-menu {
   box-shadow: 0px -1px 20px -1px rgba(72, 86, 133, 0.25);
   left: 0;
@@ -207,6 +230,7 @@ ul.dropdown-menu {
   margin-top: -2px !important;
   border-radius: 5px;
 }
+
 /* @media all and (min-width: 992px) {
   .navbar .nav-item.firstNav .dropdown-menu.dropMenu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
   .navbar .nav-item.firstNav:hover .nav-link{ color: var(--button-bg-color); }
@@ -234,12 +258,15 @@ ul.dropdown-menu {
     transition: 0.3s;
     margin-top: 0;
   }
+
   .navbar .nav-item.firstNav:hover .nav-link {
     color: var(--button-bg-color);
   }
+
   .navbar .dropdown-menu.dropMenu {
     top: 180%;
   }
+
   .navbar .nav-item.firstNav:hover .dropdown-menu.dropMenu {
     transition: 0.3s;
     opacity: 1;
@@ -247,6 +274,7 @@ ul.dropdown-menu {
     top: 100%;
     transform: rotateX(0deg);
   }
+
   .secondnav .secondDrop {
     display: block;
     opacity: 0;
@@ -255,6 +283,7 @@ ul.dropdown-menu {
     margin-top: 0px;
     top: 0;
   }
+
   .secondnav .thirddrop {
     display: block;
     opacity: 0;
@@ -263,15 +292,19 @@ ul.dropdown-menu {
     margin-top: 0px;
     top: 0;
   }
+
   .navbar .nav-item.secondnav:hover .nav-link {
     color: var(--button-bg-color) !important;
   }
+
   .navbar .dropdown-menu.secondDrop {
     top: 80%;
   }
+
   .navbar .dropdown-menu.thirddrop {
     top: 80%;
   }
+
   .secondnav:hover .secondDrop {
     transition: 0.3s;
     opacity: 1;
@@ -279,6 +312,7 @@ ul.dropdown-menu {
     top: 0;
     transform: rotateX(0deg);
   }
+
   .thirdnav:hover .thirddrop {
     transition: 0.3s;
     opacity: 1;
@@ -291,10 +325,12 @@ ul.dropdown-menu {
     right: 0 !important;
     left: 100% !important;
   }
+
   .thirddrop {
     right: 0 !important;
     left: 100% !important;
   }
+
   .navbar ul ul li:hover {
     border-left: 3px solid #2c3e50;
   }
@@ -313,6 +349,7 @@ ul.dropdown-menu {
   width: 100vw;
   position: relative;
 }
+
 /**************** Home page Css start here *****************/
 .banner {
   background: #fff5d6 url(../images/images-home-bg.png) top center no-repeat;
@@ -329,18 +366,21 @@ ul.dropdown-menu {
   align-items: flex-start;
   justify-content: center;
 }
+
 .newheading h1 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
   font-size: 42px;
   font-weight: 700;
 }
+
 .newheading h1 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
   font-size: 42px;
   font-weight: 700;
 }
+
 .main-banner h1 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -349,6 +389,7 @@ ul.dropdown-menu {
   line-height: 50px;
   margin-bottom: 0;
 }
+
 .main-banner h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -357,6 +398,7 @@ ul.dropdown-menu {
   line-height: 50px;
   margin-bottom: 0;
 }
+
 .main-banner p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -364,25 +406,30 @@ ul.dropdown-menu {
   line-height: 30px;
   margin: 10px 0 24px;
 }
+
 .page-btn {
   display: flex;
   margin-bottom: 2rem;
   align-items: center;
 }
+
 .mit-button.cus-btn {
   margin-left: 1rem;
   display: flex;
   align-items: center;
 }
+
 .mit-button.cus-btn span {
   font-size: 22px;
   padding-right: 10px;
 }
+
 .main-banner .insti-list {
   display: flex;
   margin: 0;
   padding: 25px 0 0;
 }
+
 .main-banner .insti-list li {
   list-style: none;
   display: flex;
@@ -395,6 +442,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 24px;
 }
+
 .main-banner .insti-list li span {
   font-family: var(--font-family-R);
   font-size: 1rem;
@@ -411,6 +459,7 @@ ul.dropdown-menu {
   width: 100%;
   height: 100%;
 }
+
 .css-details .stc-det {
   display: flex;
   border-radius: 37px;
@@ -425,6 +474,7 @@ ul.dropdown-menu {
   justify-content: center;
   margin-left: 1rem;
 }
+
 .css-details .stc-det .students-det h3 {
   margin: 0 0 3px;
   color: var(--text-color);
@@ -433,6 +483,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 24px;
 }
+
 .css-details .stc-det .students-det span {
   margin: 0;
   color: var(--text-color);
@@ -441,16 +492,19 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 16px;
 }
+
 .stc-det.student-sec {
   position: absolute;
   top: 125px;
   left: -33px;
 }
+
 .stc-det.course-sec {
   position: absolute;
   top: 135px;
   right: 0px;
 }
+
 .banner .css-details .banner-img {
   max-width: 588px;
   max-height: 550px;
@@ -484,12 +538,15 @@ ul.dropdown-menu {
   width: 40px;
   height: 40px;
 }
+
 .banner-slider .slick-prev {
   right: 57px;
 }
+
 .banner-slider .slick-next {
   right: 17px;
 }
+
 .banner-slider .slick-prev::before {
   content: "\e90c";
   font-family: "mitskills" !important;
@@ -511,6 +568,7 @@ ul.dropdown-menu {
   background-color: #ffffff;
   /* opacity: .5; */
 }
+
 .banner-slider .slick-arrow.slick-disabled::before {
   color: #222;
 }
@@ -518,6 +576,7 @@ ul.dropdown-menu {
 .banner-slider .slick-dots {
   display: none !important;
 }
+
 .banner-slider .slick-dots {
   position: absolute;
   bottom: -40px;
@@ -552,6 +611,7 @@ ul.dropdown-menu {
   background: #d7d7d7;
   border-radius: 10px;
 }
+
 .banner-slider .slick-dots li.slick-active button {
   background: #222222;
 }
@@ -571,6 +631,7 @@ ul.dropdown-menu {
 .feature-details {
   display: none;
 }
+
 .feature-details ul {
   display: flex;
   flex-direction: row;
@@ -578,6 +639,7 @@ ul.dropdown-menu {
   margin: 2rem 0 0;
   padding: 0;
 }
+
 .feature-details ul li {
   list-style: none;
   display: flex;
@@ -604,28 +666,35 @@ ul.dropdown-menu {
   line-height: 16px;
   margin-left: 12px;
 }
+
 .feature-details ul li:nth-child(2n + 1) {
   margin-left: 0;
 }
+
 .feature-details ul li:last-child {
   margin-right: 0;
 }
+
 .feature-details ul li:nth-child(2n + 2) {
   margin-right: 0;
 }
+
 .alumni {
   margin-top: 5rem;
 }
+
 .alumni .our-al {
   display: flex;
   background: url(../images/images-alumni.png) top left no-repeat;
   background-size: contain;
   background-position: 20px;
 }
+
 .alumni.benefits .our-al {
-  background: url(../images/images-benefits.png) center left no-repeat;
+  /* background: url(../images/images-benefits.png) center left no-repeat; */
   align-items: center;
 }
+
 .alumni .our-al p {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -633,12 +702,14 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 48px;
 }
+
 .pay-method {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
+
 .pay-method li {
   list-style: none;
   display: flex;
@@ -653,6 +724,7 @@ ul.dropdown-menu {
   border: 1px solid #d7d7d7;
   box-shadow: 0px 27px 39px -25px rgba(39, 52, 120, 0.25);
 }
+
 /* .pay-method li:nth-child(2n + 1){
   margin-left: 0;
 }
@@ -663,38 +735,38 @@ ul.dropdown-menu {
 /* .img-width.phonepay{height: 45px;} */
 .alumni.benefits {
   background: rgba(255, 190, 118, 1);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 245, 214, 1) 50%,
-    rgba(16, 49, 95, 3) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 245, 214, 1) 50%,
+      rgba(16, 49, 95, 3) 100%);
   margin: 7rem 0 5rem;
 }
+
 .befit-details {
   display: flex;
   align-items: center;
   border-radius: 0 0 0 100px;
   padding: 4rem 0;
   background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(16, 49, 95, 3) 10%,
-    rgba(16, 49, 95, 3) 10%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(16, 49, 95, 3) 10%,
+      rgba(16, 49, 95, 3) 10%);
 }
+
 .our-benefits img {
   position: relative;
   border-radius: 5px;
   margin-right: 40px;
 }
+
 .our-benefits .bene-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
+
 .our-benefits .bene-list li {
   list-style: none;
   display: flex;
@@ -712,21 +784,26 @@ ul.dropdown-menu {
   background: #fff;
   box-shadow: 0px 27px 39px -25px rgba(39, 52, 120, 0.25);
 }
+
 .our-benefits .bene-list li:nth-child(2n + 1) {
   margin-left: 0;
 }
+
 .our-benefits .bene-list li:nth-child(2n + 2) {
   margin-right: 0;
 }
+
 /* .skill-story{background-color: #FFF5D6;padding: 4rem 0; margin-top: 4rem;} */
 .skill-story {
   background-color: #f5f6fa;
   padding: 4rem 0;
 }
+
 .skill-story .mit-det {
   display: flex;
   align-items: center;
 }
+
 .skill-story .mit-det p {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -734,6 +811,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 48px;
 }
+
 .skill-story .with-decades p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -741,18 +819,22 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 28px;
 }
+
 .skill-story .with-decades p:last-child {
   margin-bottom: 0;
 }
+
 .skill-story1 {
   background-color: #f5f6fa;
   padding: 4rem 0;
   margin-top: 4rem;
 }
+
 .skill-story1 .mit-det {
   display: flex;
   align-items: center;
 }
+
 .skill-story1 .mit-det p {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -760,6 +842,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 48px;
 }
+
 .skill-story1 .with-decades p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -767,18 +850,22 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 28px;
 }
+
 .skill-story1 .with-decades p:last-child {
   margin-bottom: 0;
 }
+
 .skill-story-new {
   background-color: #fff;
   padding: 4rem 0;
   margin-top: 4rem;
 }
+
 .skill-story-new .mit-det {
   display: flex;
   align-items: center;
 }
+
 .skill-story-new .mit-det p {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -786,6 +873,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 48px;
 }
+
 .skill-story-new .with-decades p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -793,14 +881,17 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 28px;
 }
+
 .skill-story-new .with-decades p:last-child {
   margin-bottom: 0;
 }
+
 .skill-story.globalAcc {
   background-color: transparent;
   padding: 4rem 0;
   margin: 0;
 }
+
 .cer-slider h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -809,6 +900,7 @@ ul.dropdown-menu {
   line-height: 44px;
   margin-top: 4.5rem;
 }
+
 .cer-slider h5 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -817,9 +909,11 @@ ul.dropdown-menu {
   line-height: 44px;
   margin-top: 4.5rem;
 }
+
 .certification-carousel {
   margin: 1rem 0 2rem 0;
 }
+
 /* .slick-track .item.slick-slide{
   margin-right: 1.5rem;
 } */
@@ -839,12 +933,15 @@ ul.dropdown-menu {
   width: 40px;
   height: 40px;
 }
+
 .certification-carousel .slick-prev {
   right: 40px;
 }
+
 .certification-carousel .slick-next {
   right: 0;
 }
+
 .certification-carousel .slick-prev::before {
   content: "\e90c";
   font-family: "mitskills" !important;
@@ -866,6 +963,7 @@ ul.dropdown-menu {
   background-color: #e7e7e7;
   /* opacity: .5; */
 }
+
 .certification-carousel .slick-arrow.slick-disabled::before {
   color: #222;
 }
@@ -877,6 +975,7 @@ ul.dropdown-menu {
   min-height: 444px;
   margin: 0 0.75rem;
 }
+
 .cus-card .card-title {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -887,6 +986,7 @@ ul.dropdown-menu {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .cus-card .card-title a {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -898,11 +998,13 @@ ul.dropdown-menu {
   text-overflow: ellipsis;
   text-decoration: none;
 }
+
 .cus-card .card-body {
   padding: 30px 34px;
   background: #f5f5f5;
   position: relative;
 }
+
 .cer-duration {
   position: absolute;
   top: -43px;
@@ -914,9 +1016,11 @@ ul.dropdown-menu {
   color: #fff;
   padding: 12px 15px 9px;
 }
+
 .cer-duration p {
   margin: 0 0 0 0.6rem;
 }
+
 .cus-card .card-text {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -926,10 +1030,12 @@ ul.dropdown-menu {
   margin-bottom: 1rem;
   min-height: 75px;
 }
+
 .cus-card .course-fee {
   display: flex;
   justify-content: space-between;
 }
+
 .cus-card .course-fee p {
   color: #000;
   font-family: var(--font-family-R);
@@ -938,29 +1044,35 @@ ul.dropdown-menu {
   line-height: 28px;
   margin: 0;
 }
+
 .card-button {
   border: 0;
   background: transparent;
   margin-top: 1rem;
   font-size: 1rem;
 }
+
 .cus-card:hover .card-button {
   animation: bounce 0.6s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
+
 @keyframes bounce {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(10px);
   }
 }
+
 .final-announcement {
   background: #ffc000;
   padding: 1rem 0;
 }
+
 .ann-box {
   display: flex;
   flex-direction: row;
@@ -969,6 +1081,7 @@ ul.dropdown-menu {
   position: relative;
   z-index: 9;
 }
+
 .final-announcement .ann-box p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -977,6 +1090,7 @@ ul.dropdown-menu {
   line-height: 28px;
   margin-bottom: 0;
 }
+
 .final-announcement .ann-box p a {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -998,9 +1112,11 @@ ul.dropdown-menu {
   /* position: absolute;
   right: -2rem; */
 }
+
 .global-acc {
   display: flex;
 }
+
 .global-acc ul {
   display: flex;
   flex-direction: row;
@@ -1016,12 +1132,14 @@ ul.dropdown-menu {
   white-space: nowrap;
   padding: 0;
 }
+
 .global-acc ul li {
   list-style: none;
   /* flex: 1 0 20%; */
   display: flex;
   margin-right: 1.15rem;
 }
+
 .global-acc ul li img {
   max-width: 100px;
 }
@@ -1076,6 +1194,7 @@ ul.dropdown-menu {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+
 /**************** Home page Css ends here *****************/
 /**************** Inner page Css start here *****************/
 .inner-banner {
@@ -1083,21 +1202,25 @@ ul.dropdown-menu {
   background-image: inherit;
   padding: 2rem 0 0rem;
 }
+
 .inner-banner.six-banner {
   padding-top: 0;
 }
+
 .enquiry-bar {
   background: #222;
   padding: 2rem 1rem;
   position: relative;
   z-index: 2;
 }
+
 .enquiry-bar .program-details {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
+
 .enquiry-bar .program-details li {
   list-style: none;
   display: flex;
@@ -1108,25 +1231,30 @@ ul.dropdown-menu {
   color: #fff;
   border-left: 1px solid #5c5c5c;
 }
+
 .enquiry-bar .program-details li:first-child,
 .enquiry-bar .program-details li:last-child {
   border-left: none;
 }
+
 .enquiry-bar .program-details li span {
   font-size: 2rem;
 }
+
 .enquiry-bar .program-details li .program-feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 1rem;
 }
+
 .enquiry-bar .program-details li .program-feature p {
   margin: 0;
   color: #fff;
   font-family: var(--font-family-R);
   font-size: 1rem;
 }
+
 .enquiry-bar .program-details li .program-feature span {
   margin: 0;
   color: #fff;
@@ -1134,6 +1262,7 @@ ul.dropdown-menu {
   font-size: 1.1rem;
   font-weight: 700;
 }
+
 /* .enquire-btn{
   width: 100%;
 } */
@@ -1145,16 +1274,20 @@ ul.dropdown-menu {
   background-color: #fff5d6 !important;
   color: var(--button-bg-color) !important;
 }
+
 .price-enquiry h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
   font-size: 38px;
   font-weight: 700;
-  line-height: 48px; /* 119.048% */
+  line-height: 48px;
+  /* 119.048% */
 }
+
 .price-enquiry.digital-fee {
   padding-bottom: 2rem;
 }
+
 .css-details .stc-det.inner-sec {
   padding: 16px;
   border-radius: 16px;
@@ -1162,13 +1295,16 @@ ul.dropdown-menu {
   box-shadow: 0px 34px 53px -4px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
+
 .css-details .stc-det.inner-sec img {
   max-width: 50px;
 }
+
 .stc-det.student-sec.inner-sec {
   left: 60px;
   top: 85px;
 }
+
 .stc-det.course-sec.inner-sec {
   top: inherit;
   right: 75px;
@@ -1178,6 +1314,7 @@ ul.dropdown-menu {
 .stc-det.student-sec.inner-sec.capm-sec {
   left: 140px;
 }
+
 .stc-det.course-sec.inner-sec.capm-sec {
   top: 85px;
   bottom: inherit;
@@ -1206,20 +1343,24 @@ ul.dropdown-menu {
   white-space: nowrap;
   margin-bottom: 0;
 }
+
 .app-features li {
   list-style: none;
   display: flex;
   padding: 5px 20px 0;
 }
+
 .app-features li a {
   text-decoration: none;
   color: var(--text-color);
   padding: 1rem;
   border-bottom: 2px solid transparent;
 }
+
 .app-features li a:hover {
   color: #ff9f43;
 }
+
 .app-features li a.active {
   color: #ff9f43;
   border-bottom-color: initial;
@@ -1242,12 +1383,14 @@ ul.dropdown-menu {
 .enroll-certification {
   padding-top: 4rem;
 }
+
 .enroll-certification .fintech-certi.hand-tool {
   display: flex;
   background: url(../images/images-tools.png) top left no-repeat;
   background-position: 20px;
   background-position: 20px;
 }
+
 .enroll-certification .fintech-certi h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1255,6 +1398,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 44px;
 }
+
 .enroll-certification .fintech-certi1 h6 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1262,6 +1406,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 44px;
 }
+
 .enroll-certification .fintech-certi h4 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1269,6 +1414,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 44px;
 }
+
 /* .enroll-certification .fintech-certi h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1284,6 +1430,7 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 24px;
 }
+
 .enroll-certification .fintech-certi .note-list strong {
   font-family: var(--font-family-SB);
   font-weight: 700;
@@ -1292,6 +1439,7 @@ ul.dropdown-menu {
 .enroll-certification .fintech-certi img {
   margin-top: 1rem;
 }
+
 .enroll-certification .fintech-certi.multi-exp h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1299,6 +1447,7 @@ ul.dropdown-menu {
   font-weight: 700;
   margin: 1rem 0;
 }
+
 .enroll-certification .fintech-certi.multi-exp p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -1315,6 +1464,7 @@ ul.dropdown-menu {
   display: flex;
   justify-content: space-between;
 }
+
 .fin-feature .single-fee h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1331,12 +1481,15 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 28px;
 }
+
 .enroll-certification .fin-feature p strong {
   font-family: var(--font-family-SB);
 }
+
 .enroll-certification .fin-feature.learn-expert {
   padding-top: 4rem;
 }
+
 .enroll-certification .fin-feature.learn-expert h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1344,6 +1497,7 @@ ul.dropdown-menu {
   font-weight: 700;
   margin: 0;
 }
+
 .enroll-certification .fin-feature.learn-expert a {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -1351,6 +1505,7 @@ ul.dropdown-menu {
   font-weight: 600;
   text-decoration: none;
 }
+
 /* .learn-sec{
   padding-top: 0;
 } */
@@ -1363,6 +1518,7 @@ ul.dropdown-menu {
   display: flex;
   margin-top: 2rem;
 }
+
 .over-card {
   display: flex;
   flex-direction: column;
@@ -1372,9 +1528,11 @@ ul.dropdown-menu {
   background: #fff5d6;
   border: 0;
 }
+
 .over-card .card-body {
   padding: 0;
 }
+
 .over-card .card-body .card-title {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1382,6 +1540,7 @@ ul.dropdown-menu {
   font-weight: 700;
   padding: 1rem 0 0.5rem;
 }
+
 .over-card .card-body .card-text {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -1396,6 +1555,7 @@ ul.dropdown-menu {
   justify-content: space-between;
   background: url(../images/images-fee.png) top left no-repeat;
 }
+
 .fee-distribution {
   background-color: #f5f5f5;
   border-radius: 5px;
@@ -1410,6 +1570,7 @@ ul.dropdown-menu {
   text-transform: capitalize;
   font-size: 18px;
 }
+
 .fee-card {
   display: flex;
   flex-direction: column;
@@ -1417,18 +1578,22 @@ ul.dropdown-menu {
   margin: 0 7px;
   min-width: 251px;
 }
+
 .fee-card:nth-child(1) {
   margin-left: 0;
 }
+
 .fee-card:nth-child(3) {
   margin-right: 0;
 }
+
 .fee-card .card-title {
   color: var(--text-color);
   font-family: var(--font-family-R);
   font-size: 1rem;
   font-weight: 700;
 }
+
 .fee-card .card-body {
   display: flex;
   flex-direction: column;
@@ -1449,12 +1614,14 @@ ul.dropdown-menu {
   flex-direction: column;
   width: 100%;
 }
+
 .fee-card .card-body .fee-list li {
   color: #14142b;
   border-bottom: 1px solid #d2d2d2;
   list-style: none;
   padding: 1rem 0;
 }
+
 .fee-card .card-body .fee-list li:last-child {
   border-bottom: none;
   padding-bottom: 1rem;
@@ -1465,6 +1632,7 @@ ul.dropdown-menu {
   flex-direction: column;
   margin-bottom: 3rem;
 }
+
 .cur-accordiaon h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1473,9 +1641,11 @@ ul.dropdown-menu {
   line-height: 44px;
   margin-bottom: 1rem;
 }
+
 .curriculum-accordion {
   padding: 0 0;
 }
+
 .curriculum-accordion .accordion-item {
   border: none;
   margin: 1rem 0;
@@ -1518,6 +1688,7 @@ ul.dropdown-menu {
   background-color: #10315f;
   border-radius: 20%;
 }
+
 .accordion-button:not(.collapsed)::after {
   background-image: none;
   content: "\e90e";
@@ -1537,6 +1708,7 @@ ul.dropdown-menu {
   display: flex;
   flex-direction: column;
 }
+
 .fintech-module h2 {
   display: flex;
   flex-direction: column;
@@ -1546,11 +1718,13 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 30px;
 }
+
 .fintech-module ul {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
 }
+
 .fintech-module ul li {
   margin: 0;
   padding: 0;
@@ -1564,6 +1738,7 @@ ul.dropdown-menu {
 .fintech-module.digital-mod ul {
   padding-left: 0;
 }
+
 .fintech-module.digital-mod ul li {
   list-style: none;
 }
@@ -1572,22 +1747,27 @@ ul.dropdown-menu {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
 }
+
 .stc-det.course-sec {
   -webkit-animation: mover1 1s infinite alternate;
   animation: mover1 1s infinite alternate;
 }
+
 @keyframes mover {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-12px);
   }
 }
+
 @keyframes mover1 {
   0% {
     transform: translateY(-12px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -1596,6 +1776,7 @@ ul.dropdown-menu {
 .imc-img {
   max-width: 150px;
 }
+
 .pmp-img {
   max-width: 100%;
 }
@@ -1603,6 +1784,7 @@ ul.dropdown-menu {
 .privacy-policy {
   position: relative;
 }
+
 .top-bg {
   position: absolute;
   width: 100%;
@@ -1610,9 +1792,11 @@ ul.dropdown-menu {
   z-index: -1;
   background-color: #fff5d6;
 }
+
 .privacy-header {
   padding: 39px 0 29px;
 }
+
 .privacy-header h1 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1620,6 +1804,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 50px;
 }
+
 .privacy-content {
   display: inline-flex;
   padding: 16px 57px;
@@ -1632,6 +1817,7 @@ ul.dropdown-menu {
   background: #fff;
   box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.13);
 }
+
 .privacy-content h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1640,6 +1826,7 @@ ul.dropdown-menu {
   line-height: 20px;
   margin: 1rem 0;
 }
+
 .privacy-content h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1648,6 +1835,7 @@ ul.dropdown-menu {
   line-height: 20px;
   margin-bottom: 1rem;
 }
+
 .privacy-content p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -1655,9 +1843,11 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 20px;
 }
+
 .privacy-content ul {
   margin-bottom: 0;
 }
+
 .privacy-content ul li {
   list-style: decimal;
   color: var(--text-color);
@@ -1667,19 +1857,23 @@ ul.dropdown-menu {
   line-height: 20px;
   margin-bottom: 1rem;
 }
+
 .privacy-content ul li strong {
   font-family: var(--font-family-SB);
   /* font-size: 14px; */
 }
+
 /**************** Modal Css start here *****************/
 .modal.enquiry {
   top: 2.5rem;
 }
+
 .modal.enquiry .modal-dialog .modal-content {
   background: #fff5d6;
   border: 0;
   border-radius: 23px;
 }
+
 .modal.enquiry .modal-dialog .modal-content .modal-body {
   padding: 0 50px 50px;
 }
@@ -1688,6 +1882,7 @@ ul.dropdown-menu {
   border: none;
   padding: 22px;
 }
+
 .modal.enquiry .modal-title {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1695,20 +1890,24 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 28px;
 }
+
 .modal.enquiry .modal-dialog.en-modal {
   width: 700px;
 }
+
 /**************** Modal Css ends here *****************/
 
 .about-banner {
   background: #fff5d6;
   padding: 4rem 0;
 }
+
 .about-heading {
   background: url(../images/images-about-us.png) top left no-repeat;
   background-position: 20px;
   background-size: 70% 70%;
 }
+
 .about-heading h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1716,17 +1915,21 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 44px;
 }
+
 .enroll-certification.about-sec {
   padding: 5rem 0 4rem;
 }
+
 .about-det {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .enroll-certification.about-sec .drdetails {
   margin-left: 3rem;
 }
+
 .enroll-certification.about-sec .drdetails h3 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1734,6 +1937,7 @@ ul.dropdown-menu {
   line-height: 28px;
   font-weight: 700;
 }
+
 .enroll-certification.about-sec .drdetails p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -1741,6 +1945,7 @@ ul.dropdown-menu {
   line-height: 28px;
   font-weight: 700;
 }
+
 .be-change {
   display: flex;
   flex-direction: column;
@@ -1754,24 +1959,29 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 28px;
 }
+
 .be-change p strong {
   font-family: var(--font-family-SB);
   font-size: 20px;
 }
+
 .blog-head {
   background: #fff5d6;
   padding: 2rem 0 0;
 }
+
 .blog-banner {
   background: url(../images/images-blog-bannerbg.png) center left no-repeat;
   align-items: center;
   display: flex;
 }
+
 .blog-det {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
+
 .enroll-certification.blog-sec {
   padding: 3rem 0 2rem;
 }
@@ -1781,6 +1991,7 @@ ul.dropdown-menu {
   border: none;
   border-radius: 5px 5px 0 0;
 }
+
 .blog-card img {
   border-radius: 5px 5px 0 0;
 }
@@ -1792,6 +2003,7 @@ ul.dropdown-menu {
   border: 0;
   cursor: pointer;
 }
+
 .blog-card .dateTime {
   color: #777;
   font-family: var(--font-family-R);
@@ -1801,6 +2013,7 @@ ul.dropdown-menu {
   line-height: normal;
   margin: 16px 0;
 }
+
 .blog-card .card-title {
   font-size: 22px;
   line-height: 32px;
@@ -1817,20 +2030,24 @@ ul.dropdown-menu {
 .blog-card .card-button {
   margin-top: 0;
 }
+
 .pagination-blog {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
 }
+
 .pagination-blog .pagination {
   padding: 0;
   margin: 0;
 }
+
 .pagination .page-item {
   align-items: center;
   display: flex;
 }
+
 .pagination .page-item .page-link {
   align-items: center;
   display: flex;
@@ -1842,18 +2059,22 @@ ul.dropdown-menu {
   line-height: 28px;
   border-radius: 0;
 }
+
 .pagination .page-item .page-link span {
   font-size: 12px;
   font-weight: 900;
 }
+
 .pagination .page-item .page-link.active {
   color: #000;
   background: transparent;
 }
+
 .pagination .page-item:first-child .page-link {
   background: #f5f5f5;
   color: #222;
 }
+
 .pagination .page-item:last-child .page-link {
   background: #222;
   color: #fff;
@@ -1868,10 +2089,12 @@ ul.dropdown-menu {
   background: url(../images/images-map.png) center center no-repeat;
   background-size: cover;
 }
+
 .contact-box {
   position: relative;
   z-index: 2;
 }
+
 .con-listing {
   border-bottom: 11px solid #ff9f43;
 }
@@ -1882,6 +2105,7 @@ ul.dropdown-menu {
   justify-content: space-between;
   background-color: #222;
 }
+
 .con-head {
   background: url(../images/images-contact-bg.png) top left no-repeat;
   background-position: 30px;
@@ -1890,6 +2114,7 @@ ul.dropdown-menu {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .con-block .con-head h2 {
   color: #fff;
   font-family: var(--font-family-SB);
@@ -1898,6 +2123,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 44px;
 }
+
 .con-head .con-info {
   display: flex;
   flex-direction: column;
@@ -1907,6 +2133,7 @@ ul.dropdown-menu {
   display: flex;
   align-items: center;
 }
+
 .con-head .con-info .con-details span {
   color: #ff9f43;
 }
@@ -1914,6 +2141,7 @@ ul.dropdown-menu {
 .con-head .con-info .con-details.mail-details span {
   font-size: 14px;
 }
+
 .con-head .con-info .con-details p {
   margin-bottom: 0;
   margin-left: 1rem;
@@ -1924,23 +2152,27 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: 25px;
 }
+
 .con-formList {
   padding: 130px;
   background: #747474;
   /* margin-right:calc(-.5 * var(--bs-gutter-x)); */
 }
+
 .con-formList h2 {
   color: #fff;
   font-family: var(--font-family-SB);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
+  /* 155.556% */
 }
 
 .con-formList .con-form span {
   color: #5c5c5c;
 }
+
 .blog-det-container {
   display: flex;
   flex-direction: column;
@@ -1967,9 +2199,11 @@ ul.dropdown-menu {
   line-height: 28px;
   margin-bottom: 2rem;
 }
+
 .blog-det-container img {
   margin-bottom: 2rem;
 }
+
 .resource-list {
   border-top: 1px solid #d7d7d7;
 }
@@ -1977,11 +2211,13 @@ ul.dropdown-menu {
 .blog-details {
   background: #fff5d6;
 }
+
 .green-belt {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+
 .green-belt h2 {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -1990,13 +2226,16 @@ ul.dropdown-menu {
   line-height: 50px;
   margin-bottom: 0;
 }
+
 .user-details {
   display: flex;
   margin-top: 1.5rem;
 }
+
 .user-details img {
   margin-right: 1rem;
 }
+
 .user-details .user-blog {
   color: #000;
   font-family: var(--font-family-R);
@@ -2005,11 +2244,13 @@ ul.dropdown-menu {
   font-weight: 400;
   line-height: normal;
 }
+
 .user-details .user-blog h6 {
   font-family: var(--font-family-SB);
   font-weight: 700;
   margin-bottom: 3px;
 }
+
 .user-details .user-blog p {
   margin: 0;
 }
@@ -2023,6 +2264,7 @@ ul.dropdown-menu {
   align-items: center;
   justify-content: center;
 }
+
 .keep-up h2 {
   color: #000;
   text-align: center;
@@ -2030,14 +2272,17 @@ ul.dropdown-menu {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 36px; /* 150% */
+  line-height: 36px;
+  /* 150% */
 }
+
 .sub-sec {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
 .learner-support {
   background: #ffbe76;
   display: flex;
@@ -2054,7 +2299,8 @@ ul.dropdown-menu {
   font-size: 38px;
   font-style: normal;
   font-weight: 700;
-  line-height: 44px; /* 115.789% */
+  line-height: 44px;
+  /* 115.789% */
 }
 
 .stuck-happy {
@@ -2070,8 +2316,10 @@ ul.dropdown-menu {
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 27px; /* 122.727% */
+  line-height: 27px;
+  /* 122.727% */
 }
+
 .stuck-happy p {
   color: var(--text-color);
   font-family: var(--font-family-R);
@@ -2081,6 +2329,7 @@ ul.dropdown-menu {
   line-height: 27px;
   margin: 0;
 }
+
 .stuck-happy p a {
   color: var(--text-color);
   font-family: var(--font-family-SB);
@@ -2090,6 +2339,7 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 27px;
 }
+
 /**************** Inner page Css ends here *****************/
 /************************************************
   Body ends here
@@ -2104,12 +2354,14 @@ ul.dropdown-menu {
   background: #f5f5f5;
   padding: 43px 0 1rem 0;
 }
+
 .fls {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid #d7d7d7;
 }
+
 .fls p {
   color: var(--text-color);
   font-size: var(--medium-font-size);
@@ -2118,6 +2370,7 @@ ul.dropdown-menu {
   margin-right: 3rem;
   margin-bottom: 0;
 }
+
 .socials.social-footer {
   border: none;
   align-items: flex-start;
@@ -2125,9 +2378,11 @@ ul.dropdown-menu {
   margin: 0;
   padding-left: 0;
 }
+
 .socials.social-footer .socials-links:first-child {
   margin-left: 0;
 }
+
 .socials.social-footer .socials-links {
   padding: 0;
 }
@@ -2138,6 +2393,7 @@ ul.dropdown-menu {
   border-right: 1px solid #d7d7d7;
   padding-left: 2rem;
 }
+
 .courses-list h2,
 .contact h2,
 .contact-info h2 {
@@ -2147,18 +2403,22 @@ ul.dropdown-menu {
   font-weight: 700;
   line-height: 28px;
 }
+
 .courses-list ul {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
 }
+
 .courses-list ul li {
   list-style: none;
 }
+
 .contact-info {
   padding-left: 2rem;
 }
+
 .courses-list ul li a {
   text-decoration: none;
   color: var(--text-color);
@@ -2167,52 +2427,63 @@ ul.dropdown-menu {
   display: flex;
   padding: 3px 0;
 }
+
 .contact-info .cc-list.time-list {
   margin-top: 3rem;
 }
+
 /* .contact-info .cc-list.time-list h2{margin-bottom:0} */
 .contact-info .cc-list .cc-details {
   display: flex;
   align-items: center;
 }
+
 .contact-info .cc-list .cc-details span {
   font-size: 18px;
   margin-right: 0.5rem;
   color: #777;
 }
+
 .contact-info .cc-list .cc-details.mail-details span {
   font-size: 14px;
   color: #777;
 }
+
 .contact-info .cc-list .cc-details p {
   color: var(--text-color);
   font-size: var(--medium-font-size);
   margin: 0;
   word-break: break-all;
 }
+
 .contact {
   display: flex;
   flex-direction: column;
 }
+
 .con-form .input-group-text {
   background-color: #fff;
   font-size: 16px;
   color: #777;
 }
+
 .con-form .input-group-text .mtsk-mail,
 .con-form .input-group-text .mtsk-cource {
   font-size: 14px;
 }
+
 .con-form input.form-control {
   border-left: none;
   padding-left: 0;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .con-form .dropdown.bootstrap-select {
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-left: 0;
 }
+
 .btn.dropdown-toggle,
 .btn.dropdown-toggle:hover {
   color: var(--text-color) !important;
@@ -2223,29 +2494,34 @@ ul.dropdown-menu {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.btn-check:checked + .btn.dropdown-toggle,
+
+.btn-check:checked+.btn.dropdown-toggle,
 .btn.dropdown-toggle.active,
 .btn.dropdown-toggle.show,
 .btn.dropdown-toggle:first-child:active,
-:not(.btn-check) + .btn.dropdown-toggle:active {
+:not(.btn-check)+.btn.dropdown-toggle:active {
   color: var(--text-color);
   background-color: transparent;
   border-color: inherit;
 }
+
 /* .dropdown-menu.show{padding:0;margin-top:-3px !important} */
 .dropdown-menu.inner.show {
   margin: 0 !important;
 }
-.bootstrap-select > .dropdown-toggle.bs-placeholder,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:active,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
-.bootstrap-select > .dropdown-toggle.bs-placeholder:hover {
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
   padding-left: 0;
   background-color: #ffffff;
 }
+
 .bootstrap-select .dropdown-menu li:first-child {
   display: none;
 }
+
 .bottom-footer {
   border-top: 1px solid #ccc;
   padding: 1rem 0 0;
@@ -2255,6 +2531,7 @@ ul.dropdown-menu {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .bottom-footer p {
   color: var(--text-color);
   font-size: 0.813rem;
@@ -2263,24 +2540,29 @@ ul.dropdown-menu {
   display: flex;
   align-items: center;
 }
+
 .bottom-footer p i {
   font-size: 23px;
   margin-left: 10px;
 }
+
 .bottom-footer .terms-list {
   display: flex;
   justify-content: space-between;
   flex: 0 0 60%;
 }
+
 .bottom-footer ul {
   display: flex;
   flex-direction: row;
   margin: 0;
   padding: 0;
 }
+
 .bottom-footer ul li {
   list-style: none;
 }
+
 .bottom-footer ul li a {
   text-decoration: none;
   padding: 0 1rem;
@@ -2288,6 +2570,7 @@ ul.dropdown-menu {
   font-size: var(--medium-font-size);
   line-height: 19.6px;
 }
+
 /************************************************
   Footer ends here
 /*************************************************/
@@ -2299,43 +2582,54 @@ ul.dropdown-menu {
   .main-banner {
     padding-right: 2rem;
   }
+
   .certification-carousel .slick-list {
     overflow: inherit;
   }
 }
+
 @media (max-width: 1399px) {
   .banner .css-details .banner-img {
     max-width: 492px;
   }
+
   .inner-banner .css-details .banner-img {
     max-width: 400px;
   }
+
   .stc-det.student-sec.inner-sec {
     left: 22px;
     top: 20%;
   }
+
   .stc-det.course-sec.inner-sec {
     top: inherit;
     right: 36px;
     bottom: 75px;
   }
 }
+
 @media (max-width: 1199px) {
+
   .main-banner h2 br,
   .main-banner p br {
     display: none;
   }
+
   .pay-method li {
     width: calc(50% - 12px);
   }
+
   .our-benefits .bene-list li {
     width: calc(100% - 0px);
     margin-left: 0;
     margin-right: 0;
   }
+
   .cus-card .card-text {
     min-height: 96px;
   }
+
   /* .banner .owl-carousel{padding: 2rem 0 1rem;}
   .main-banner p {font-size:1rem;line-height: 22px;margin: 1rem 0;} */
   /* .img-width{width: 50%;} */
@@ -2344,6 +2638,7 @@ ul.dropdown-menu {
     max-width: inherit;
     max-height: inherit;
   }
+
   .css-details .stc-det {
     display: none;
   }
@@ -2351,25 +2646,32 @@ ul.dropdown-menu {
   .css-details .stc-det.inner-sec {
     display: block;
   }
+
   .stc-det.student-sec.inner-sec {
     left: -20px;
   }
+
   .stc-det.course-sec.inner-sec {
     right: -5px;
   }
+
   .banner-slider .slick-next {
     right: -10px;
   }
+
   .banner-slider .slick-prev {
     right: 30px;
   }
+
   .skill-story .mit-det p {
     font-size: 30px;
     line-height: 38px;
   }
+
   .skill-story .with-decades p {
     font-size: 1rem;
   }
+
   .learner-support {
     flex-direction: column;
     align-items: flex-start;
@@ -2380,27 +2682,34 @@ ul.dropdown-menu {
     margin-left: 0;
   }
 }
+
 @media (max-width: 991px) {
   .learner-support {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   .stuck-happy {
     margin-left: 0;
   }
+
   .green-belt {
     margin: 2rem 0;
   }
+
   .green-belt h2 br {
     display: none;
   }
+
   .con-head {
     min-height: 210px;
   }
+
   .con-formList {
     padding: 50px;
   }
+
   .middle-bg {
     margin-top: -450px;
   }
@@ -2408,41 +2717,53 @@ ul.dropdown-menu {
   .blog-head {
     padding-top: 3rem;
   }
+
   .blog-banner {
     background: transparent;
   }
+
   .blog-det {
     justify-content: center;
   }
+
   .about-banner {
     padding: 2rem 0;
   }
+
   .background {
     background: transparent;
   }
+
   .about-heading h2 {
     margin-bottom: 1rem;
   }
+
   .enroll-certification.about-sec {
     padding: 3rem 0 2rem;
   }
+
   .about-det {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .about-det img {
     margin: 0 auto;
   }
+
   .enroll-certification.about-sec .drdetails {
     margin-left: 0;
     margin-top: 2rem;
   }
+
   .be-change {
     margin-top: 2rem;
   }
+
   .banner .css-details .banner-img {
     min-width: 100%;
   }
+
   .banner.inner-banner .css-details .banner-img {
     min-width: 390px;
   }
@@ -2450,20 +2771,25 @@ ul.dropdown-menu {
   .stc-det.student-sec.inner-sec {
     left: 90px;
   }
+
   .stc-det.course-sec.inner-sec {
     right: 105px;
   }
+
   .stc-det.course-sec.inner-sec.capm-sec {
     top: 90px;
     right: 80px;
   }
+
   .main-body {
     padding-top: 67px;
     min-height: calc(100vh - 393px);
   }
+
   .app-features {
     justify-content: flex-start;
   }
+
   .banner {
     padding-top: 24px;
     margin-bottom: 3rem;
@@ -2472,27 +2798,34 @@ ul.dropdown-menu {
     background: -moz-linear-gradient(to top, #ffffff 0%, #fff5d6 50%);
     background: linear-gradient(to top, #ffffff 0%, #fff5d6 50%);
   }
+
   .price-enquiry.digital-fee {
     padding-bottom: 0;
   }
+
   .privacy-content {
     padding: 24px;
   }
+
   .banner.inner-banner {
     margin-bottom: 0;
   }
+
   .inner-banner.six-banner {
     padding-top: 2rem;
   }
+
   /* .app-featurelist{
     top: 68px;
   } */
   .fintech-certi.aboutMit-skills img {
     display: none;
   }
+
   .enroll-certification .fintech-certi.multi-exp h3 {
     margin: 0 0 0.5rem 0;
   }
+
   .main-banner h2 br,
   .main-banner p br,
   .alumni .our-al p br,
@@ -2500,49 +2833,61 @@ ul.dropdown-menu {
   .enroll-certification .fintech-certi h2 br {
     display: none;
   }
+
   .enroll-certification .fintech-certi h2,
   .cur-accordiaon h3,
   .price-enquiry h3 {
     font-size: 30px;
     line-height: 38px;
   }
+
   .price-enquiry h3 {
     margin-bottom: 1.5rem;
   }
+
   .enroll-certification .fin-feature p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
   .navigation .navbar-nav .nav-item .nav-link {
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   }
+
   .css-details .stc-det {
     display: none;
   }
+
   .modal.enquiry .modal-dialog .modal-content .modal-body {
     padding: 0 24px 30px;
   }
+
   .modal.enquiry .modal-dialog .modal-content .modal-body .modal-img {
     align-items: center;
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
   }
+
   .banner-slider .slick-arrow {
     display: none !important;
   }
+
   .banner-slider .slick-dots {
     display: block !important;
   }
+
   /* .certification-carousel .slick-arrow{
     display: none !important;
   } */
   .navigation {
     padding: 13px 0;
   }
+
   .navigation .navbar-nav {
     align-items: flex-start;
   }
+
   .socials {
     align-items: flex-start;
     justify-content: flex-start;
@@ -2550,82 +2895,105 @@ ul.dropdown-menu {
     padding: 0;
     margin: 0;
   }
+
   .socials .socials-links:first-child {
     margin-left: 0;
   }
+
   .navigation .navbar-nav .nav-item {
     padding: 0;
   }
+
   .mit-button {
     margin-bottom: 1rem;
   }
+
   .mit-button.mit-footer {
     margin-bottom: 0rem;
     padding: 6px 0 4px;
   }
+
   .navbar-toggler {
     border: none;
   }
+
   /* ul.dropdown-menu{margin:0 !important} */
   .fls p {
     margin: 0;
     padding: 0;
   }
+
   .courses-list {
     padding-left: calc(var(--bs-gutter-x) * 0.5);
   }
+
   .footer {
     padding-top: 1rem;
   }
+
   .bottom-footer .terms-list {
     flex: 0 0 50%;
   }
+
   .main-banner h2 {
     font-size: 30px;
     line-height: 38px;
   }
+
   .banner .owl-carousel {
     padding: 2rem 0 1rem;
   }
+
   .main-banner p {
     font-size: 1rem;
     line-height: 22px;
     margin: 14px 0 1rem;
   }
+
   .page-btn {
     margin-bottom: 0;
   }
+
   .mit-button.cus-btn {
     display: none;
   }
+
   .main-banner .insti-list li {
     margin-right: 4rem;
   }
+
   .owl-nav {
     display: none;
   }
+
   .owl-theme .owl-dots {
     display: block;
   }
+
   .main-banner .insti-list {
     display: none;
   }
+
   .feature-details {
     display: block;
   }
+
   .alumni .our-al p,
   .cer-slider h2 {
     font-size: 30px;
     line-height: 38px;
   }
+
   .img-width {
     width: 75%;
   }
+
   .skill-story {
     background-color: transparent;
     padding: 0;
     margin-top: 2rem;
   }
+
   .skill-story .mit-det {
     justify-content: flex-start;
   }
@@ -2633,38 +3001,46 @@ ul.dropdown-menu {
   .skill-story.globalAcc {
     padding: 2rem 0;
   }
+
   .alumni {
     background: transparent;
     margin: 3rem 0 3rem 0;
     position: relative;
   }
+
   .alumni .our-al {
     background: transparent;
     justify-content: center;
   }
+
   .alumni.benefits {
     background: transparent;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .our-benefits .bene-list li {
     width: 100%;
     margin: 7px 0;
   }
+
   .our-benefits {
     background: #fff5d6;
     border-radius: 0;
   }
+
   .alumni.benefits .our-al {
     background: transparent;
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   /* .alumni.benefits .our-al p{position: absolute;top: -3rem;} */
   .befit-details {
     background: transparent;
     padding: 1rem 0;
   }
+
   .our-benefits img {
     display: none;
   }
@@ -2672,15 +3048,18 @@ ul.dropdown-menu {
   .inner-banner {
     padding: 2rem 0 0;
   }
+
   .inner-ban-img {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .mit-button.cus-btn.inner-cus {
     display: block;
     margin-left: 0;
   }
+
   .humanImg,
   .imc-img {
     display: none;
@@ -2689,6 +3068,7 @@ ul.dropdown-menu {
   .enquiry-bar {
     padding: 0;
   }
+
   .enquiry-bar .program-details li {
     flex: 1 0 50%;
     padding: 1rem;
@@ -2696,6 +3076,7 @@ ul.dropdown-menu {
     align-items: flex-start;
     border-bottom: 1px solid #5c5c5c;
   }
+
   .enquiry-bar .program-details li:nth-child(2),
   .enquiry-bar .program-details li:nth-child(4) {
     border-right: none;
@@ -2705,31 +3086,39 @@ ul.dropdown-menu {
     margin-left: 0;
     margin-top: 0.8rem;
   }
+
   .mit-button.enquire-btn {
     margin-bottom: 0;
     color: #fff;
     width: 100%;
   }
+
   .enroll-certification {
     padding-top: 1.5rem;
   }
+
   .learn-sec .learn-det {
     border: none;
     padding: 0;
   }
+
   .enroll-certification .fintech-certi h2 {
     margin-bottom: 1rem;
   }
+
   .enroll-certification .fintech-certi.hand-tool {
     background: none;
   }
+
   .pede-card {
     margin: 1rem 0;
   }
+
   .enroll-certification .fintech-certi img {
     margin-top: 0;
     margin-bottom: 1rem;
   }
+
   /* .fintech-certi img{
     display: none;
   } */
@@ -2741,65 +3130,81 @@ ul.dropdown-menu {
   .fee-section .note-list {
     display: none;
   }
+
   .fee-distribution {
     margin-top: 1rem;
   }
+
   .enroll-certification .fin-feature.learn-expert {
     padding-top: 1rem;
   }
+
   /* .enroll-certification .fin-feature.learn-expert{
     padding-top: 0;
   } */
   .enroll-certification .fin-feature.learn-expert h3 {
     margin-bottom: 0.5rem;
   }
+
   .curriculum-accordion .accordion-item:first-child {
     margin-top: 0;
   }
+
   .curriculum-accordion .accordion-item .accordion-button {
     font-size: 16px;
     line-height: 24px;
   }
+
   .fee-distribution {
     padding-bottom: 2rem;
   }
+
   .res-row .contact {
     order: 1;
   }
+
   .res-row .courses-list {
     order: 2;
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     border-right: 0;
     margin-top: 1rem;
   }
+
   .res-row .contact-info {
     order: 3;
     margin-top: 1.5rem;
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     padding-right: calc(var(--bs-gutter-x) * 0.5);
   }
+
   .res-row .contact-info .cc-list.time-list {
     margin-top: 1rem;
   }
+
   .res-row .fls {
     order: 4;
     border-right: 0;
   }
+
   .res-row .fls .logo-img,
   .res-row .fls p {
     display: none;
   }
+
   .res-row .fls .socials.social-footer {
     margin: 2rem 0 1rem;
   }
+
   .bottom-footer {
     margin-top: 0;
     flex-wrap: wrap;
   }
+
   .bottom-footer .right-reserved {
     order: 1;
     flex: 1 0 100%;
   }
+
   .bottom-footer .terms-list {
     display: flex;
     justify-content: space-between;
@@ -2808,11 +3213,14 @@ ul.dropdown-menu {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
   }
+
   .bottom-footer .terms-list ul li a {
     padding-left: 0;
   }
 }
+
 @media (max-width: 767px) {
+
   .con-block,
   .con-formList {
     padding: 2rem;
@@ -2821,19 +3229,24 @@ ul.dropdown-menu {
   .css-details .banner-img {
     min-width: 390px;
   }
+
   .stc-det.student-sec.inner-sec {
     left: 10px;
   }
+
   .stc-det.student-sec.inner-sec.capm-sec {
     left: 90px;
   }
+
   .stc-det.course-sec.inner-sec {
     right: 20px;
   }
+
   .stc-det.course-sec.inner-sec.capm-sec {
     top: 50px;
     right: 50px;
   }
+
   .main-body {
     padding-top: 115px;
   }
@@ -2842,14 +3255,17 @@ ul.dropdown-menu {
     font-size: 30px;
     line-height: 38px;
   }
+
   .banner .owl-carousel {
     padding: 2rem 0 1rem;
   }
+
   .main-banner p {
     font-size: 14px;
     line-height: 24px;
     margin: 0.5rem 0 1rem;
   }
+
   .banner-img {
     max-width: 100%;
     max-height: 100%;
@@ -2858,31 +3274,40 @@ ul.dropdown-menu {
   .page-btn {
     margin-bottom: 0;
   }
+
   .mit-button.cus-btn {
     display: none;
   }
+
   .main-banner .insti-list li {
     margin-right: 4rem;
   }
+
   .alumni {
     margin: 3rem 0 0;
   }
+
   .alumni .our-al {
     background: none;
     justify-content: center;
   }
+
   .img-width {
     width: 60%;
   }
+
   .pay-method li {
     width: calc(50% - 6px);
   }
+
   .pay-method li:nth-child(2n + 1) {
     margin-left: 0;
   }
+
   .pay-method li:nth-child(2n + 2) {
     margin-right: 0;
   }
+
   .alumni .our-al p {
     font-size: 30px;
     line-height: 38px;
@@ -2899,6 +3324,7 @@ ul.dropdown-menu {
     line-height: 20px;
     margin-right: 1.5rem;
   }
+
   /* .slick-track .item.slick-slide{
     margin: 5px;
   } */
@@ -2910,10 +3336,12 @@ ul.dropdown-menu {
   .blog-card {
     margin: 1rem 0 !important;
   }
+
   .cer-slider h2 {
     font-size: 30px;
     line-height: 38px;
   }
+
   .certification-carousel {
     margin: 0;
   }
@@ -2924,12 +3352,15 @@ ul.dropdown-menu {
     left: -24px;
     top: 20%;
   }
+
   .stc-det.student-sec.inner-sec.capm-sec {
     left: 50px;
   }
+
   .stc-det.course-sec.inner-sec {
     right: -24px;
   }
+
   .stc-det.course-sec.inner-sec.capm-sec {
     right: 16px;
   }
@@ -2937,17 +3368,19 @@ ul.dropdown-menu {
   .fin-feature .single-fee {
     padding: 1.5rem;
   }
+
   .fin-feature .single-fee h3 {
     font-size: 28px;
   }
+
   .single-fee .mit-button {
     margin: 0;
   }
 }
-@media (max-width: 1200px) {
-}
-@media (max-width: 1400px) {
-}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1400px) {}
 
 /*  */
 
@@ -2994,21 +3427,25 @@ ul.dropdown-menu {
 /*  */
 
 .breadcrumb-item:first-child a {
-  color: #1a1919; /* Color for the "Home" link */
+  color: #1a1919;
+  /* Color for the "Home" link */
   font-size: 19px;
   /* font-weight: 1000; */
   font-weight: bolder;
   font-family: var(--font-family-R);
   text-decoration: none;
 }
+
 .breadcrumb-item:nth-child(2) a {
-  color: #1a1919; /* Color for the "Home" link */
+  color: #1a1919;
+  /* Color for the "Home" link */
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   text-transform: capitalize;
   font-family: var(--font-family-R);
 }
+
 /* .breadcrumb-item:nth-child(3 ) a {
   color: #1a1919;
   font-size: 18px;
@@ -3032,6 +3469,7 @@ ul.dropdown-menu {
   0% {
     opacity: 1;
   }
+
   25% {
     opacity: 0;
   }
@@ -3070,49 +3508,52 @@ ul.dropdown-menu {
     margin-left: -24px;
   }
 }
+
 /* logo */
 
 /* Section padding */
-#team, .faculty-section {
-    padding: 40px 0;
+#team,
+.faculty-section {
+  padding: 40px 0;
 }
 
 /* Card design */
 .custom-profile-card {
-    border-radius: 20px;
-    padding: 25px 15px;
-    text-align: center;
-    border: none;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+  border-radius: 20px;
+  padding: 25px 15px;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
 .custom-profile-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Circle Image */
 .custom-img {
-    width: 150px;
-    height: 150px;
-    margin: 15px auto 0 auto;
-    border-radius: 50%;
-    border: 6px solid #10315f;     /* Orange Border */
-    object-fit: cover;
-    display: block;
+  width: 150px;
+  height: 150px;
+  margin: 15px auto 0 auto;
+  border-radius: 50%;
+  border: 6px solid #10315f;
+  /* Orange Border */
+  object-fit: cover;
+  display: block;
 }
 
 /* Name Title */
 .custom-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
 }
 
 /* Designation text */
 .custom-profile-card .card-text {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 10px;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
 }

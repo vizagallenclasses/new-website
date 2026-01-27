@@ -548,8 +548,12 @@
 
 
                         function showPosition1(Position) {
-                            document.querySelector('.myFormH input[name="latitude"]').value = Position.coords.latitude;
-                            document.querySelector('.myFormH input[name="longitude"]').value = Position.coords.longitude;
+                            // Target hidden inputs in the expert form
+                            var latInput = document.querySelector('input[name="latitude"]');
+                            var longInput = document.querySelector('input[name="longitude"]');
+
+                            if (latInput) latInput.value = Position.coords.latitude;
+                            if (longInput) longInput.value = Position.coords.longitude;
                         }
                         function showError(error) {
                             switch (error.code) {
@@ -1521,8 +1525,7 @@
 
 
 
-                        <form action="mailto:allenclasses2014@gmail.com" method="post"
-                            class="reservation-form mt-20 myFormF" accept-charset="utf-8" name="menuContactform"
+                        <form class="reservation-form mt-20 myFormF" accept-charset="utf-8" name="menuContactform"
                             id="menuContactform" novalidate="novalidate">
                             <input type="hidden" name="csrf_test_name" value="e678298614a47d7e40efe0ccaf02b49c">
                             <input type="hidden" id="product_id3" name="product_id3" value="0">
@@ -2141,8 +2144,7 @@
                                 <img src="images/enqstudent.png" class="img-fluid" alt="">
                             </div>
                             <div class="col-md-12 col-lg-7">
-                                <form action="mailto:allenclasses2014@gmail.com" class="myFormP" method="post"
-                                    name="menuContactformone" id="menuContactformone">
+                                <form class="myFormP" name="menuContactformone" id="menuContactformone">
 
                                     <input type="hidden" name="csrf_test_name" value="e678298614a47d7e40efe0ccaf02b49c">
                                     <input type="hidden" id="product_id3" name="product_id3" value="0">
@@ -2270,8 +2272,7 @@
                                 <img src="images/images-enquirey.png" class="img-fluid" alt="">
                             </div>
                             <div class="col-md-12 col-lg-7">
-                                <form action="mailto:allenclasses2014@gmail.com" method="post" class="myFormpopup"
-                                    name="QuickContact3" id="QuickContact3">
+                                <form class="myFormpopup" name="QuickContact3" id="QuickContact3">
 
                                     <input type="hidden" name="csrf_test_name" value="e678298614a47d7e40efe0ccaf02b49c">
                                     <input type="hidden" id="product_id3" name="product_id3" value="0">
@@ -2470,13 +2471,22 @@
             <script>
                 // Auto Show Popup
                 window.onload = function () {
-                    document.getElementById("popupBackground").style.display = "flex";
+                    var popup = document.getElementById("popupBackground");
+                    if (popup) {
+                        popup.style.display = "flex";
+                    }
                 };
 
                 // Close Popup
-                document.getElementById("closeBtn").onclick = function () {
-                    document.getElementById("popupBackground").style.display = "none";
-                };
+                var closeBtn = document.getElementById("closeBtn");
+                if (closeBtn) {
+                    closeBtn.onclick = function () {
+                        var popup = document.getElementById("popupBackground");
+                        if (popup) {
+                            popup.style.display = "none";
+                        }
+                    };
+                }
             </script>
 
             <a href="https://wa.me/919966008581" target="_blank" style="position:fixed; bottom:20px; right:20px; background:#25D366; 
