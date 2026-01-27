@@ -8,16 +8,39 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware configuration
 // CORS: Allow all origins that respect the credentials flag (reflective origin)
-app.use(cors({
-    origin: true,
-    methods: ['POST', 'GET', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    credentials: true,
-    optionsSuccessStatus: 200
-}));
+// Manual CORS Middleware - Foolproof method
+app.use((req, res, next) => {
+    // Allowed origins
+    const allowedOrigins = [
+        'https://vizagallenclasses.in',
+        'https://www.vizagallenclasses.in',
+        'http://localhost',
+        'http://localhost:80',
+        'http://127.0.0.1',
+        'null' // For local file testing
+    ];
 
-// Handle preflight requests explicitly
-app.options('*', cors());
+    const origin = req.headers.origin;
+
+    // Allow all origins that are in the list, or reflect the origin if it exists
+    if (allowedOrigins.includes(origin) || !origin) {
+        res.setHeader('Access-Control-Allow-Origin', origin || '*');
+    } else {
+        // Optional: Allow all origins effectively (reflective) if specific list fails
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,authorization');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+
+    next();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
