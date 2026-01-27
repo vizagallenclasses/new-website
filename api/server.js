@@ -6,32 +6,14 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// CORS configuration - Allow specific origins
-const allowedOrigins = [
-    'https://vizagallenclasses.in',
-    'https://www.vizagallenclasses.in',
-    'http://localhost',
-    'http://localhost:80',
-    'http://127.0.0.1'
-];
-
-// Middleware
+// Middleware configuration
+// CORS: Allow all origins that respect the credentials flag (reflective origin)
 app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
-
-        if (allowedOrigins.indexOf(origin) !== -1 || origin.includes('vizagallenclasses')) {
-            callback(null, true);
-        } else {
-            console.log('CORS blocked origin:', origin);
-            callback(null, true); // Allow all for now, log for debugging
-        }
-    },
+    origin: true,
     methods: ['POST', 'GET', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     credentials: true,
-    optionsSuccessStatus: 200 // For legacy browser support
+    optionsSuccessStatus: 200
 }));
 
 // Handle preflight requests explicitly
@@ -39,6 +21,11 @@ app.options('*', cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Root endpoint for testing
+app.get('/', (req, res) => {
+    res.send('API is running. POST to /api/send-email to send emails.');
+});
 
 // Create SMTP transporter
 const transporter = nodemailer.createTransport({
