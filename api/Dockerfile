@@ -10,7 +10,7 @@ RUN npm install --production
 
 # Copy server code
 COPY server.js ./
-COPY .env ./
+# Note: .env is injected by Coolify environment variables, not copied from file
 
 # Expose port 80 (Matching Coolify's default)
 EXPOSE 80
