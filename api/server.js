@@ -4,7 +4,8 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// Default to port 80 to match Coolify's default configuration
+const PORT = process.env.PORT || 80;
 
 // Middleware configuration
 // CORS: Allow all origins that respect the credentials flag (reflective origin)

@@ -12,8 +12,11 @@ RUN npm install --production
 COPY server.js ./
 COPY .env ./
 
-# Expose port
-EXPOSE 3000
+# Expose port 80 (Matching Coolify's default)
+EXPOSE 80
+
+# Environment variable for port
+ENV PORT=80
 
 # Start the server
 CMD ["node", "server.js"]

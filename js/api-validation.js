@@ -1,4 +1,4 @@
-// API Configuration - Update this URL for production
+// API Configuration
 // For Coolify: Deploy the API container separately at forms.vizagallenclasses.in
 var API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000/api/send-email'
