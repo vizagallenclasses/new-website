@@ -1,8 +1,8 @@
 // API Configuration - Update this URL for production
-// For Coolify: Deploy the API container separately at api.vizagallenclasses.in
+// For Coolify: Deploy the API container separately at forms.vizagallenclasses.in
 var API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000/api/send-email'
-  : 'https://api.vizagallenclasses.in/api/send-email';
+  : 'https://forms.vizagallenclasses.in/api/send-email';
 
 // Submit Expert Form - New function for SMTP email sending
 function submitExpertForm() {
